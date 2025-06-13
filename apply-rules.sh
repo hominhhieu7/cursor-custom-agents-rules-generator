@@ -55,13 +55,6 @@ find .cursor -type f | while read -r file; do
     copy_if_not_exists "$file" "$target_file"
 done
 
-# Create docs directory if it doesn't exist
-mkdir -p "$TARGET_DIR/docs"
-
-# Create workflow documentation
-cat > "$TARGET_DIR/docs/workflow-rules.md" << 'EOL'
-# Cursor Workflow Rules
-
 This project has been updated to use the auto rule generator from [cursor-auto-rules-agile-workflow](https://github.com/bmadcode/cursor-auto-rules-agile-workflow).
 
 > **Note**: This script can be safely re-run at any time to update the template rules to their latest versions. It will not impact or overwrite any custom rules you've created.
